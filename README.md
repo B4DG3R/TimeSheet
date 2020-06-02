@@ -11,7 +11,7 @@ This is the first project of any kind I've actually finished that works! (YAY! :
 As It's my first app I haven't followed any particular coding style, I have tried to documewnt my code well, and try to code to a consistent style.  I have tried to implement MVC on the project which is only half done, but i will be tidying it up further over the coming weeks.
 
 ## Screenshots
-Include logo/demo screenshot etc.
+![](TimeSheetAppPreview.gif)
 
 ## Tech/framework used
 
