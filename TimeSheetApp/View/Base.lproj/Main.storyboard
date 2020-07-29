@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="8bR-0J-3K2">
+            <objects>
+                <viewController storyboardIdentifier="settingsVC" id="p4i-PY-eYu" customClass="SettingsViewController" customModule="TimeSheetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OUx-cz-Osi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="U6q-6z-X11">
+                                <rect key="frame" x="60.666666666666657" y="281" width="253.99999999999997" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPL-TK-Owo">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="SIO-v2-e5a"/>
+                                            <constraint firstAttribute="width" constant="254" id="pik-mu-RGC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Days" backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="daysButtonPressed:" destination="p4i-PY-eYu" eventType="touchUpInside" id="jw1-mf-bFc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-f2-ZyC">
+                                        <rect key="frame" x="0.0" y="91" width="254" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="254" id="93m-Wf-Bhf"/>
+                                            <constraint firstAttribute="height" constant="62" id="UUD-4k-uFI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Clear Week" backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="clearWeekButtonPressed:" destination="p4i-PY-eYu" eventType="touchUpInside" id="t76-fU-JaW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDG-oL-6Rg">
+                                        <rect key="frame" x="0.0" y="182" width="254" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="254" id="808-Id-fbH"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="a4G-I7-6XV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Add Email Address" backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="addEmailButtonPressed:" destination="p4i-PY-eYu" eventType="touchUpInside" id="QVs-FR-jNd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U6q-6z-X11" firstAttribute="centerX" secondItem="OUx-cz-Osi" secondAttribute="centerX" id="8pJ-We-FOS"/>
+                            <constraint firstItem="U6q-6z-X11" firstAttribute="centerY" secondItem="OUx-cz-Osi" secondAttribute="centerY" id="MNe-wG-tMT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rPq-Lb-Ocn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tIR-JH-Slg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2O-oz-2qr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1226" y="-13"/>
+        </scene>
+        <!--Days View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DaysVC" id="BYZ-38-t0r" customClass="DaysViewController" customModule="TimeSheetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="zmG-XY-Ky5">
+                                <rect key="frame" x="43" y="102" width="226" height="608"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-MU-CQO">
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="EHv-T2-OBZ"/>
+                                            <constraint firstAttribute="height" constant="62" id="TMH-Cd-ifg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Mon | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ra-y3-OFs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCQ-ut-jE9">
+                                        <rect key="frame" x="0.0" y="91" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="mK3-DF-77V"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="ouz-zY-Sur"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Tue | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TXq-2g-mUL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFx-YP-Wnj">
+                                        <rect key="frame" x="0.0" y="182" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="o4A-E5-P5C"/>
+                                            <constraint firstAttribute="height" constant="62" id="p3f-mk-x86"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Wed | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ix4-Cu-KIQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-sw-oeL">
+                                        <rect key="frame" x="0.0" y="273" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="QLN-QP-w5x"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="zmA-tu-6aQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Thur | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nF1-60-lUV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bu-SU-j5j">
+                                        <rect key="frame" x="0.0" y="364" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="NGV-kF-xI9"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="p62-m1-q8g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Fri | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dei-5m-auh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r26-ka-Stv">
+                                        <rect key="frame" x="0.0" y="455" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="Gdt-yt-7DF"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="nqC-YX-LCN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Sat | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQu-0T-Uj7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oi-mS-MHW">
+                                        <rect key="frame" x="0.0" y="546" width="226" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="XQG-eb-AA7"/>
+                                            <constraint firstAttribute="height" constant="62" id="vjB-H5-uHh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="     Sun | Hours : " backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miL-SR-zUa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="JJr-7c-FNO">
+                                <rect key="frame" x="277" y="102" width="62" height="608"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky9-tG-MO8" userLabel="MondayAdd+">
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="KTg-bZ-lp0"/>
+                                            <constraint firstAttribute="width" constant="62" id="jbm-0b-eTH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nAC-pV-uMC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJS-qo-Xw7" userLabel="TuesdayAdd+">
+                                        <rect key="frame" x="0.0" y="91" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="80i-Dt-Ln4"/>
+                                            <constraint firstAttribute="width" constant="62" id="TtP-bG-EpW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E33-lL-HqT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1By-7G-qBn" userLabel="WednesdayAdd+">
+                                        <rect key="frame" x="0.0" y="182" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="Hcm-f9-zNT"/>
+                                            <constraint firstAttribute="height" constant="62" id="KgJ-fi-a7j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LGh-Ij-8Yb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvZ-bq-9PQ" userLabel="ThursdayAdd+">
+                                        <rect key="frame" x="0.0" y="273" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="Jsh-eM-mXi"/>
+                                            <constraint firstAttribute="height" constant="62" id="LFu-Ga-pKg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7do-xj-IH9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmX-6k-hhu" userLabel="FridayAdd+">
+                                        <rect key="frame" x="0.0" y="364" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="8Hu-It-mbm"/>
+                                            <constraint firstAttribute="width" constant="62" id="hIJ-fq-TKc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2V6-rk-pNP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Er5-v4-pf4" userLabel="SaturdayAdd+">
+                                        <rect key="frame" x="0.0" y="455" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="NRB-zB-B4K"/>
+                                            <constraint firstAttribute="width" constant="62" id="i0v-hN-XDQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="16F-JC-0ui"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve3-7e-fJg" userLabel="SundayAdd+">
+                                        <rect key="frame" x="0.0" y="546" width="62" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="Swz-Nl-NSy"/>
+                                            <constraint firstAttribute="height" constant="62" id="t7K-ap-Ajs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPk-Va-PKA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-Nl-dzY">
+                                <rect key="frame" x="36" y="741" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Q8I-2F-L3l"/>
+                                    <constraint firstAttribute="height" constant="37" id="Wo6-hl-6TY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="22338"/>
+                                <connections>
+                                    <action selector="settingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uji-ZM-xuv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4Q-Mp-mq5">
+                                <rect key="frame" x="302" y="741" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="WOH-Sv-NIl"/>
+                                    <constraint firstAttribute="height" constant="37" id="d34-ir-VDu"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="arrowshape.turn.up.right" catalog="system"/>
+                                <connections>
+                                    <action selector="exportButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtC-fk-syP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JJr-7c-FNO" firstAttribute="leading" secondItem="zmG-XY-Ky5" secondAttribute="trailing" constant="8" id="1Wu-QO-gtQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JJr-7c-FNO" secondAttribute="bottom" constant="68" id="1am-Do-HmV"/>
+                            <constraint firstItem="zmG-XY-Ky5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="GBE-Cm-Lkn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JJr-7c-FNO" secondAttribute="trailing" constant="36" id="Jl0-Fp-RbW"/>
+                            <constraint firstItem="jb3-Nl-dzY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="KGl-Sn-pFq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C4Q-Mp-mq5" secondAttribute="trailing" constant="36" id="LoD-NE-8np"/>
+                            <constraint firstItem="jb3-Nl-dzY" firstAttribute="top" secondItem="zmG-XY-Ky5" secondAttribute="bottom" constant="31" id="U3t-5s-cqa"/>
+                            <constraint firstItem="JJr-7c-FNO" firstAttribute="leading" secondItem="zmG-XY-Ky5" secondAttribute="trailing" constant="8" id="USI-Lk-A0G"/>
+                            <constraint firstItem="C4Q-Mp-mq5" firstAttribute="top" secondItem="JJr-7c-FNO" secondAttribute="bottom" constant="31" id="UeO-Kg-9Ft"/>
+                            <constraint firstItem="JJr-7c-FNO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="i3l-gV-w0H"/>
+                            <constraint firstItem="jb3-Nl-dzY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mdY-ie-zVU"/>
+                            <constraint firstItem="C4Q-Mp-mq5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pKw-2z-tCq"/>
+                            <constraint firstItem="C4Q-Mp-mq5" firstAttribute="leading" secondItem="jb3-Nl-dzY" secondAttribute="trailing" constant="229" id="rDn-4W-OaP"/>
+                            <constraint firstItem="zmG-XY-Ky5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="t0m-HO-Dmu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OAn-MX-TKq"/>
+                    <connections>
+                        <outlet property="fridayLabel" destination="8bu-SU-j5j" id="Lu2-mV-uiJ"/>
+                        <outlet property="mondayLabel" destination="pMh-MU-CQO" id="6IO-ZK-Zal"/>
+                        <outlet property="saturdayLabel" destination="r26-ka-Stv" id="2Nx-tT-rJ8"/>
+                        <outlet property="sundayLabel" destination="3Oi-mS-MHW" id="Ma9-RC-xs4"/>
+                        <outlet property="thursdayLabel" destination="f0p-sw-oeL" id="TDT-rK-6WW"/>
+                        <outlet property="tuesdayLabel" destination="uCQ-ut-jE9" id="9Dj-JE-i81"/>
+                        <outlet property="wednesdayLabel" destination="dFx-YP-Wnj" id="e95-bi-lCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399.19999999999999" y="-13.300492610837439"/>
+        </scene>
+        <!--Add Edit Tasks View Controller-->
+        <scene sceneID="ohQ-Qr-7eh">
+            <objects>
+                <viewController storyboardIdentifier="addEditTasksVC" id="LvW-ac-HLl" customClass="AddEditTasksViewController" customModule="TimeSheetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eah-rK-Mxw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="Ezk-Qj-EUj">
+                                <rect key="frame" x="20" y="81" width="335" height="298"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wG2-xL-2CB">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="jobDescriptionClicked:" destination="LvW-ac-HLl" eventType="editingDidBegin" id="Wuo-UI-Bye"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hours" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFJ-Ad-r0a">
+                                        <rect key="frame" x="0.0" y="88" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="HoursFieldClicked:" destination="LvW-ac-HLl" eventType="editingDidBegin" id="DeS-Mm-M7g"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Y Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-Hy-g4Z">
+                                        <rect key="frame" x="0.0" y="176" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-sj-0d1">
+                                        <rect key="frame" x="0.0" y="264" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CFJ-Ad-r0a" firstAttribute="leading" secondItem="Ezk-Qj-EUj" secondAttribute="leading" id="M3l-Cj-vaE"/>
+                                    <constraint firstAttribute="trailing" secondItem="hRh-Hy-g4Z" secondAttribute="trailing" id="MRV-cB-DIf"/>
+                                    <constraint firstItem="XdX-sj-0d1" firstAttribute="leading" secondItem="Ezk-Qj-EUj" secondAttribute="leading" id="NWe-2Q-MPd"/>
+                                    <constraint firstItem="wG2-xL-2CB" firstAttribute="leading" secondItem="Ezk-Qj-EUj" secondAttribute="leading" id="dBt-WT-vM0"/>
+                                    <constraint firstAttribute="trailing" secondItem="XdX-sj-0d1" secondAttribute="trailing" id="dLM-Vi-sH3"/>
+                                    <constraint firstAttribute="trailing" secondItem="wG2-xL-2CB" secondAttribute="trailing" id="gDR-2a-n6F"/>
+                                    <constraint firstAttribute="trailing" secondItem="CFJ-Ad-r0a" secondAttribute="trailing" id="k7R-WH-tzl"/>
+                                    <constraint firstItem="hRh-Hy-g4Z" firstAttribute="leading" secondItem="Ezk-Qj-EUj" secondAttribute="leading" id="yxX-1o-PXO"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfQ-RR-4fB">
+                                <rect key="frame" x="106" y="730" width="162" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="L58-pO-5QH"/>
+                                    <constraint firstAttribute="height" constant="48" id="wka-3n-5fj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Save" backgroundImage="RectangleRoundCorners"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="LvW-ac-HLl" eventType="touchUpInside" id="qfM-pW-9Ic"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECA-ll-2XW">
+                                <rect key="frame" x="0.0" y="506" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AKm-Cs-PZb" firstAttribute="trailing" secondItem="Ezk-Qj-EUj" secondAttribute="trailing" constant="20" id="6Ko-bo-ZBJ"/>
+                            <constraint firstItem="ECA-ll-2XW" firstAttribute="trailing" secondItem="AKm-Cs-PZb" secondAttribute="trailing" id="Cq1-xP-2VB"/>
+                            <constraint firstItem="Ezk-Qj-EUj" firstAttribute="centerX" secondItem="Eah-rK-Mxw" secondAttribute="centerX" id="Nwz-De-QCL"/>
+                            <constraint firstItem="UfQ-RR-4fB" firstAttribute="bottom" secondItem="AKm-Cs-PZb" secondAttribute="bottom" id="SOc-rc-6fj"/>
+                            <constraint firstItem="Ezk-Qj-EUj" firstAttribute="top" secondItem="AKm-Cs-PZb" secondAttribute="top" constant="37" id="UQ7-vX-saz"/>
+                            <constraint firstItem="AKm-Cs-PZb" firstAttribute="trailing" secondItem="UfQ-RR-4fB" secondAttribute="trailing" constant="107" id="mNo-UF-wl1"/>
+                            <constraint firstItem="Ezk-Qj-EUj" firstAttribute="leading" secondItem="AKm-Cs-PZb" secondAttribute="leading" constant="20" id="rWA-I1-Pm7"/>
+                            <constraint firstItem="UfQ-RR-4fB" firstAttribute="top" secondItem="ECA-ll-2XW" secondAttribute="bottom" constant="8" id="uNu-MW-WIv"/>
+                            <constraint firstItem="UfQ-RR-4fB" firstAttribute="leading" secondItem="AKm-Cs-PZb" secondAttribute="leading" constant="106" id="xOf-rS-LZO"/>
+                            <constraint firstItem="ECA-ll-2XW" firstAttribute="leading" secondItem="AKm-Cs-PZb" secondAttribute="leading" id="zYF-Dj-1SQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AKm-Cs-PZb"/>
+                    </view>
+                    <connections>
+                        <outlet property="hoursTextField" destination="CFJ-Ad-r0a" id="xw5-xq-UI8"/>
+                        <outlet property="jobCodePickerClicked" destination="ECA-ll-2XW" id="Mbh-ok-RVs"/>
+                        <outlet property="jobCodeTextField" destination="XdX-sj-0d1" id="5Fb-cQ-9Z1"/>
+                        <outlet property="jobDescriptionTextField" destination="wG2-xL-2CB" id="e4M-00-TCP"/>
+                        <outlet property="yNumberTextField" destination="hRh-Hy-g4Z" id="vD2-91-Fbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqQ-ci-zvM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="-13"/>
+        </scene>
+        <!--Add Email View Controller-->
+        <scene sceneID="kpA-zt-JzS">
+            <objects>
+                <viewController storyboardIdentifier="addEmailVC" id="Afc-21-AU1" customClass="AddEmailViewController" customModule="TimeSheetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8mk-gI-rII">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="SoY-Vp-Ijg">
+                                <rect key="frame" x="37" y="171" width="300" height="162.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email: No User Email Stored" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de5-0v-vHu" userLabel="User Email Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgz-Xg-Vmq">
+                                        <rect key="frame" x="0.0" y="49.333333333333343" width="300" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="kEp-QW-JgH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4O8-tl-aMT">
+                                        <rect key="frame" x="50" y="112.33333333333331" width="200" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Xhr-hM-i49"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="vU6-Ju-nbD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Save Email" backgroundImage="RectangleRoundCorners"/>
+                                        <connections>
+                                            <action selector="saveButtonClicked:" destination="Afc-21-AU1" eventType="touchUpInside" id="qBb-mh-3oY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4O8-tl-aMT" firstAttribute="top" secondItem="vgz-Xg-Vmq" secondAttribute="bottom" constant="29" id="7ui-nf-7iU"/>
+                                    <constraint firstItem="vgz-Xg-Vmq" firstAttribute="leading" secondItem="SoY-Vp-Ijg" secondAttribute="leading" id="RR3-Xg-d8F"/>
+                                    <constraint firstItem="de5-0v-vHu" firstAttribute="leading" secondItem="SoY-Vp-Ijg" secondAttribute="leading" id="fhF-2x-PYN"/>
+                                    <constraint firstItem="vgz-Xg-Vmq" firstAttribute="top" secondItem="de5-0v-vHu" secondAttribute="bottom" constant="29" id="lil-HU-nU9"/>
+                                    <constraint firstAttribute="trailing" secondItem="de5-0v-vHu" secondAttribute="trailing" id="pfE-LB-rPD"/>
+                                    <constraint firstItem="vgz-Xg-Vmq" firstAttribute="top" secondItem="de5-0v-vHu" secondAttribute="bottom" constant="29" id="w0R-R4-n6M"/>
+                                    <constraint firstAttribute="trailing" secondItem="vgz-Xg-Vmq" secondAttribute="trailing" id="z3s-7N-LsI"/>
+                                    <constraint firstItem="de5-0v-vHu" firstAttribute="top" secondItem="SoY-Vp-Ijg" secondAttribute="top" id="zch-F9-tff"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CWv-Y3-P0Q" firstAttribute="bottom" secondItem="SoY-Vp-Ijg" secondAttribute="bottom" constant="444.67000000000002" id="0Md-Lw-3Ru"/>
+                            <constraint firstItem="CWv-Y3-P0Q" firstAttribute="trailing" secondItem="SoY-Vp-Ijg" secondAttribute="trailing" constant="38" id="3KE-st-vaP"/>
+                            <constraint firstItem="SoY-Vp-Ijg" firstAttribute="leading" secondItem="CWv-Y3-P0Q" secondAttribute="leading" constant="37" id="3xq-kK-PGi"/>
+                            <constraint firstItem="SoY-Vp-Ijg" firstAttribute="top" secondItem="CWv-Y3-P0Q" secondAttribute="top" constant="127" id="HdE-4a-9Qz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CWv-Y3-P0Q"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J8M-DM-NzJ"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="vgz-Xg-Vmq" id="BGf-wr-r4o"/>
+                        <outlet property="userEmailLabel" destination="de5-0v-vHu" id="jFp-TA-mFy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKy-5Z-AdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2095.1999999999998" y="-13.300492610837439"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="22338" width="512" height="512"/>
+        <image name="RectangleRoundCorners" width="322" height="68"/>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
+    </resources>
+</document>
