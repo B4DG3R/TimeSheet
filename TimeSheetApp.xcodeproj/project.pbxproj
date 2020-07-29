@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233BAFB02469E0C70093725D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BAFAF2469E0C70093725D /* SettingsViewController.swift */; };
+		233BAFB22469F5F60093725D /* AddEditTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233BAFB12469F5F60093725D /* AddEditTasksViewController.swift */; };
+		233DE8C12473304200726F1F /* UserEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233DE8C02473304200726F1F /* UserEmail.swift */; };
+		233DE8C32473381200726F1F /* EmailBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233DE8C22473381200726F1F /* EmailBrain.swift */; };
+		236B415224724AAD002CE90B /* AddEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B415124724AAD002CE90B /* AddEmailViewController.swift */; };
+		2399E40F246DE23B00442D8D /* TimeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399E40E246DE23B00442D8D /* TimeSheet.swift */; };
+		2399E411246DE37A00442D8D /* TimeSheetBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399E410246DE37A00442D8D /* TimeSheetBrain.swift */; };
 		23F80211246848FD00270525 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F80210246848FD00270525 /* AppDelegate.swift */; };
 		23F80213246848FD00270525 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F80212246848FD00270525 /* SceneDelegate.swift */; };
-		23F80215246848FD00270525 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F80214246848FD00270525 /* ViewController.swift */; };
+		23F80215246848FD00270525 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F80214246848FD00270525 /* DaysViewController.swift */; };
 		23F80218246848FD00270525 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F80216246848FD00270525 /* Main.storyboard */; };
 		23F8021B246848FD00270525 /* TimeSheetApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F80219246848FD00270525 /* TimeSheetApp.xcdatamodeld */; };
 		23F8021D2468490000270525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F8021C2468490000270525 /* Assets.xcassets */; };
@@ -17,10 +24,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		233BAFAF2469E0C70093725D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		233BAFB12469F5F60093725D /* AddEditTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTasksViewController.swift; sourceTree = "<group>"; };
+		233DE8C02473304200726F1F /* UserEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEmail.swift; sourceTree = "<group>"; };
+		233DE8C22473381200726F1F /* EmailBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailBrain.swift; sourceTree = "<group>"; };
+		236B415124724AAD002CE90B /* AddEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailViewController.swift; sourceTree = "<group>"; };
+		2399E40E246DE23B00442D8D /* TimeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheet.swift; sourceTree = "<group>"; };
+		2399E410246DE37A00442D8D /* TimeSheetBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetBrain.swift; sourceTree = "<group>"; };
 		23F8020D246848FD00270525 /* TimeSheetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeSheetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F80210246848FD00270525 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23F80212246848FD00270525 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23F80214246848FD00270525 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23F80214246848FD00270525 /* DaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
 		23F80217246848FD00270525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23F8021A246848FD00270525 /* TimeSheetApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeSheetApp.xcdatamodel; sourceTree = "<group>"; };
 		23F8021C2468490000270525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,14 +74,45 @@
 			children = (
 				23F80210246848FD00270525 /* AppDelegate.swift */,
 				23F80212246848FD00270525 /* SceneDelegate.swift */,
-				23F80214246848FD00270525 /* ViewController.swift */,
-				23F80216246848FD00270525 /* Main.storyboard */,
+				23F802272468491500270525 /* Model */,
+				23F802282468491E00270525 /* View */,
+				23F80229246849CC00270525 /* Controller */,
 				23F8021C2468490000270525 /* Assets.xcassets */,
 				23F8021E2468490000270525 /* LaunchScreen.storyboard */,
 				23F802212468490000270525 /* Info.plist */,
 				23F80219246848FD00270525 /* TimeSheetApp.xcdatamodeld */,
 			);
 			path = TimeSheetApp;
+			sourceTree = "<group>";
+		};
+		23F802272468491500270525 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2399E40E246DE23B00442D8D /* TimeSheet.swift */,
+				233DE8C02473304200726F1F /* UserEmail.swift */,
+				2399E410246DE37A00442D8D /* TimeSheetBrain.swift */,
+				233DE8C22473381200726F1F /* EmailBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23F802282468491E00270525 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23F80216246848FD00270525 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23F80229246849CC00270525 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23F80214246848FD00270525 /* DaysViewController.swift */,
+				233BAFAF2469E0C70093725D /* SettingsViewController.swift */,
+				233BAFB12469F5F60093725D /* AddEditTasksViewController.swift */,
+				236B415124724AAD002CE90B /* AddEmailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F80215246848FD00270525 /* ViewController.swift in Sources */,
+				23F80215246848FD00270525 /* DaysViewController.swift in Sources */,
 				23F80211246848FD00270525 /* AppDelegate.swift in Sources */,
+				233DE8C12473304200726F1F /* UserEmail.swift in Sources */,
+				2399E40F246DE23B00442D8D /* TimeSheet.swift in Sources */,
+				236B415224724AAD002CE90B /* AddEmailViewController.swift in Sources */,
 				23F8021B246848FD00270525 /* TimeSheetApp.xcdatamodeld in Sources */,
 				23F80213246848FD00270525 /* SceneDelegate.swift in Sources */,
+				233DE8C32473381200726F1F /* EmailBrain.swift in Sources */,
+				2399E411246DE37A00442D8D /* TimeSheetBrain.swift in Sources */,
+				233BAFB22469F5F60093725D /* AddEditTasksViewController.swift in Sources */,
+				233BAFB02469E0C70093725D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZU4295NP5;
 				INFOPLIST_FILE = TimeSheetApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthollyhead.TimeSheetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZU4295NP5;
 				INFOPLIST_FILE = TimeSheetApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matthollyhead.TimeSheetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
